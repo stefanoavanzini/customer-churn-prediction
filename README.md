@@ -62,6 +62,22 @@ Initial inspection of the dataset, including:
 
 ---
 
+## Results & Insights
+
+A baseline classification model was trained to predict customer churn using engineered features derived from customer demographics, account information, and service usage.
+
+**Key results:**
+- The baseline Logistic Regression model achieves reasonable performance on unseen data.
+- ROC–AUC was used as the primary evaluation metric to account for class imbalance.
+- The model provides interpretable coefficients, allowing insight into key drivers of churn.
+
+**Key insights:**
+- Contract type and tenure are among the strongest predictors of churn.
+- Customers on month-to-month contracts show significantly higher churn risk.
+- Longer tenure and bundled services are associated with lower churn probability.
+
+---
+
 ## Technologies Used
 
 - Python
@@ -75,7 +91,7 @@ Initial inspection of the dataset, including:
 
 ## Notes
 
-This project focuses on clarity and correctness rather than exhaustive model optimization.
+This project focuses on clarity, interpretability, and reproducibility rather than model complexity.
 Future extensions may include:
 - alternative classifiers,
 - hyperparameter tuning,
