@@ -208,5 +208,3 @@ __marimo__/
 
 # Data science project specific
 data/processed/
-data/interim/
-models/
