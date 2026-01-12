@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Jupyter Notebook](https://img.shields.io/badge/notebooks-Jupyter-orange)
+
+
 # Customer Churn Prediction
 This project focuses on predicting customer churn using a supervised machine learning approach.
 The goal is to identify customers at high risk of leaving, using structured customer data and interpretable classification models.
@@ -73,10 +77,11 @@ The analysis is organized into sequential notebooks:
 
 ---
 
-## Results
+## Key Results
 
 - A baseline classification model was trained to predict customer churn.
-- Model performance was evaluated using standard metrics to assess predictive quality.
+- Model performance was evaluated using standard metrics to assess predictive quality (test set performance: Accuracy ~76%, ROC-AUC ~84%).
+- End-to-end scikit-learn pipeline implemented and serialized.
 - The final model provides a reasonable trade-off between performance and interpretability.
 
 This project is intended as a demonstrator of a clean and reproducible ML workflow rather than a production-grade system.
