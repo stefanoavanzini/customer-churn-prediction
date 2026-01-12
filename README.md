@@ -1,105 +1,133 @@
 # Customer Churn Prediction
+This project focuses on predicting customer churn using a supervised machine learning approach.
+The goal is to identify customers at high risk of leaving, using structured customer data and interpretable classification models.
 
-This project explores a supervised machine learning approach to predict customer churn using Python and scikit-learn.
-
-The goal is to build a clear, reproducible end-to-end workflow covering:
-- exploratory data analysis,
-- feature engineering and preprocessing,
-- baseline predictive modeling and evaluation.
-
-The project is intended as a portfolio example of applied data science rather than a production-ready system.
+The project is designed as an end-to-end data analysis workflow, from exploratory data analysis to model evaluation.
 
 ---
 
-## Project Structure
+## Project Overview
 
-customer-churn-prediction/
-│
-├── data/
-│ └── raw/ # Raw dataset (not tracked if proprietary)
-│
-├── notebooks/
-│ ├── 01_data_exploration.ipynb
-│ ├── 02_feature_engineering.ipynb
-│ └── 03_modeling.ipynb
-│
-├── requirements.txt
-└── README.md
+Customer churn prediction is a common business problem in subscription-based and customer-centric industries.
+In this project, I develop a classification pipeline to:
 
+- explore and preprocess customer data
+- engineer relevant features
+- train and validate predictive models
+- evaluate performance using standard classification metrics
+
+The emphasis is on clarity, reproducibility, and interpretability rather than model complexity.
 
 ---
 
 ## Dataset
 
-The dataset contains customer-level information such as:
-- demographic features,
-- subscription details,
-- usage patterns,
-- churn status (target variable).
+- The dataset contains customer-level information such as demographics, service usage, and contract details.
+- The target variable indicates whether a customer has churned.
+- Data are provided as a structured tabular dataset (CSV format).
 
-The target variable is binary (`Yes` / `No`) and represents whether a customer has churned.
+The dataset is included in the repository to ensure full reproducibility.
 
 ---
 
-## Workflow Overview
+## Project Structure
 
-### 1. Exploratory Data Analysis
-Initial inspection of the dataset, including:
-- distribution of the target variable,
-- relationships between churn and key features,
-- identification of missing values and categorical variables.
-
-### 2. Feature Engineering
-- Separation of numerical and categorical features.
-- Scaling of numerical variables.
-- One-hot encoding of categorical variables.
-- Use of scikit-learn pipelines to prevent data leakage.
-
-### 3. Modeling
-- Logistic Regression used as a baseline classifier.
-- Model evaluation using accuracy, confusion matrix, ROC curve, and AUC.
-- Emphasis on interpretability and reproducibility.
+```
+customer-churn-prediction/
+│
+├── data/
+│   ├── raw/                # Original dataset
+│   └── processed/          # Cleaned data used for modeling
+│
+├── models/                 # Saved models or model-related artifacts
+│
+│
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_preprocessing.ipynb
+│   └── 03_modeling.ipynb
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
+\
+```
 
 ---
 
-## Results & Insights
+## Workflow
 
-A baseline classification model was trained to predict customer churn using engineered features derived from customer demographics, account information, and service usage.
+The analysis is organized into sequential notebooks:
+1. Exploratory Data Analysis
+   - inspection of data quality and distributions
+   - identification of missing values and potential predictors
+   - initial insights into churn patterns
+2. Preprocessing & Feature Engineering
+   - encoding of categorical variables
+   - feature selection and transformation
+   - preparation of train/test splits
+3. Modeling & Evaluation
+   - baseline classification models
+   - performance evaluation on test data
+   - comparison using standard metrics (accuracy, precision, recall, ROC-AUC)
 
-**Key results:**
-- The baseline Logistic Regression model achieves reasonable performance on unseen data.
-- ROC–AUC was used as the primary evaluation metric to account for class imbalance.
-- The model provides interpretable coefficients, allowing insight into key drivers of churn.
+---
 
-**Key insights:**
-- Contract type and tenure are among the strongest predictors of churn.
-- Customers on month-to-month contracts show significantly higher churn risk.
-- Longer tenure and bundled services are associated with lower churn probability.
+## Results
+
+- A baseline classification model was trained to predict customer churn.
+- Model performance was evaluated using standard metrics to assess predictive quality.
+- The final model provides a reasonable trade-off between performance and interpretability.
+
+This project is intended as a demonstrator of a clean and reproducible ML workflow rather than a production-grade system.
+
+---
+
+## How to Run the Project
+
+Clone the repository:
+```
+git clone https://github.com/stefanoavanzini/customer-churn-prediction.git
+cd customer-churn-prediction
+```
+
+Create and activate a virtual environment:
+```
+python -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+Open the notebooks:
+```
+jupyter notebook
+```
+
+and run them in order (01_eda → 02_preprocessing → 03_modeling).
 
 ---
 
 ## Technologies Used
 
-- Python
-- pandas, numpy
-- scikit-learn
-- matplotlib, seaborn
-- Jupyter Notebook
-- Git / GitHub
+Python  
+pandas, numpy  
+scikit-learn  
+matplotlib, seaborn  
+Jupyter Notebook  
+Git
 
 ---
 
 ## Notes
 
-This project focuses on clarity, interpretability, and reproducibility rather than model complexity.
-Future extensions may include:
-- alternative classifiers,
-- hyperparameter tuning,
-- cross-validation,
-- feature importance analysis.
+This project is part of a personal portfolio focused on applied data analysis and predictive modeling.
+The emphasis is on methodological clarity, reproducibility, and clear communication of results.
 
 ---
-
 ## Author
 
 Stefano Avanzini
